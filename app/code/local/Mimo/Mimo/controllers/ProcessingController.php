@@ -14,7 +14,7 @@
  *
  * @category   Mimo
  * @package    Mimo (mimo.com)
- * @copyright  Copyright (c) 2011 Mimo (https://www.mimo.com)
+ * @copyright  Copyright (c) 2011 Mimo (https://www.mimo.com.ng)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
