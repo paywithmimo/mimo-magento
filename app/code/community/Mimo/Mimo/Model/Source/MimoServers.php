@@ -12,9 +12,6 @@
  * obtain it through the world-wide-web, please send an email
  * to license@magentocommerce.com so we can send you a copy immediately.
  *
- * @category   Dwolla
- * @package    Dwolla (dwolla.com)
- * @copyright  Copyright (c) 2011 Dwolla (https://www.dwolla.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -39,7 +36,7 @@ class Mimo_Mimo_Model_Source_MimoServers
             ),
             array(
                 'value' => self::SERVER_TEST,
-                'label' => Mage::helper('paygate')->__('Test')
+                'label' => Mage::helper('paygate')->__('Staging')
             ),
         );
     }
