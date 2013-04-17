@@ -25,8 +25,11 @@ class Mimo_Mimo_Block_Form extends Mage_Payment_Block_Form
      */
     private $errorMessage = false;
     
-    const API_SERVER = "https://staging.mimo.com.ng/oauth/v2";
-    const USER_API_SERVER = "https://staging.mimo.com.ng/partner/";
+   const LIVE_API_SERVER = "https://www.mimo.com.ng/oauth/v2";
+    const LIVE_USER_API_SERVER = "https://www.mimo.com.ng/partner/";
+    
+    const STAGE_API_SERVER = "https://sandbox.mimo.com.ng/oauth/v2";
+    const STAGE_USER_API_SERVER = "https://sandbox.mimo.com.ng/partner/";
     /**
      * Sets the initial state of the client
      *
@@ -42,8 +45,17 @@ class Mimo_Mimo_Block_Form extends Mage_Payment_Block_Form
      */
     protected function _construct()
     {
-    	$this->apiServerUrl = self::API_SERVER;
-    	$this->apiServerUrlUser=self::USER_API_SERVER;   
+    	if(Mage::getModel('mimo/paymentmethod')->getConfigData('mimo_server') == 'Live')
+    	{
+    		$this->apiServerUrl = self::LIVE_API_SERVER;
+    		$this->apiServerUrlUser=self::LIVE_USER_API_SERVER;
+    	}
+    	else
+    	{
+    		$this->apiServerUrl = self::STAGE_API_SERVER;
+    		$this->apiServerUrlUser=self::STAGE_USER_API_SERVER;
+    	}
+    	
         $this->setTemplate('mimo/form.phtml');
 		parent::_construct();
     }	
