@@ -70,8 +70,7 @@ class Mimo_Mimo_Block_Form extends Mage_Payment_Block_Form
     }
     public function getOnepage()
     {
-    	//return $this->getUrl('checkout/onepage', array('_secure'=>true));
-    	return 'http://192.168.101.101:120/index.php/checkout/multishipping/billing/';
+    	return $this->getUrl('checkout/multishipping/billing/', array('_secure'=>true));
     }   
     public function getQueryString()
     {    	
