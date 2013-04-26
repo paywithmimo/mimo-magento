@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Mimo_MimoPaymentModule>
+      <version>3.0.0</version>
+    </Mimo_MimoPaymentModule>
+  </modules>
+  <global>
+  	<resources>
+	  	<MimoPaymentModule_setup>
+	  	  <setup>
+		  	  <module>Mimo_MimoPaymentModule</module>
+		  	  <class>Mage_Core_Model_Resource_Setup</class>
+	  	  </setup>
+          <connection>
+            <use>core_setup</use>
+          </connection>
+	  	</MimoPaymentModule_setup>
+  	</resources>
+    <models>
+      <MimoPaymentModule>
+        <class>Mimo_MimoPaymentModule_Model</class>
+      </MimoPaymentModule>
+    </models>
+    
+    <events>
+	  <sales_order_place_after>
+	    <observers>
+	      <mimo_mimopaymentmodule_model_observer>
+	        <type>singleton</type>
+	        <class>Mimo_MimoPaymentModule_Model_Observer</class>
+	        <method>save_mimo_transaction_id</method>
+	      </mimo_mimopaymentmodule_model_observer>
+	    </observers>
+	  </sales_order_place_after>     
+	</events>
+    
+    <helpers>
+      <MimoPaymentModule>
+        <class>Mimo_MimoPaymentModule_Helper</class>
+      </MimoPaymentModule>
+    </helpers>
+    <blocks>
+      <MimoPaymentModule>
+        <class>Mimo_MimoPaymentModule_Block</class>
+      </MimoPaymentModule>
+    </blocks>
+  </global>
+  <default>
+    <payment>
+      <MimoPaymentModule>
+        <model>MimoPaymentModule/Standard</model>
+        <active>1</active>
+        <MimoTestMode>0</MimoTestMode>
+        <order_status>pending</order_status>
+        <title>MiMo</title>
+        <payment_action>sale</payment_action>
+        <sort_order>1</sort_order>
+      </MimoPaymentModule>
+    </payment>
+  </default>
+  <frontend>
+    <routers>
+      <MimoPaymentModule>
+        <use>standard</use>
+        <args>
+          <module>Mimo_MimoPaymentModule</module>
+          <frontName>MimoPaymentModule</frontName>
+        </args>
+      </MimoPaymentModule>
+    </routers>
+  </frontend>
+  
+  
+  
+</config>
