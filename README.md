@@ -26,7 +26,8 @@ Open app/etc/local.xml file and copy and paste below content in your magento_dir
 	&lt;/admin&gt;
 &lt;/stores&gt;
 </pre>
-Important: 
+
+<strong>Important: </strong>
 Don't replace whole local.xml file.
 Copy and paste only above content only.
 
@@ -35,16 +36,23 @@ Copy and paste only above content only.
 
 Now you can set up your MiMo module. Login with your magento admin panel and go through below step for configure MiMo model. 
 
-1) Go to system/Configuration/Advance/advance/Disable Modules Output/Mimo_MimoPaymentModule. Enable this module if it is not already enabled.
-2) Go to system/Configuration/Sales/checkout/checkout options/Enable Onepage Checkout. Select No from dropdown. So simply you just need to disable one page checkout.
-3) Go to system/Configuration/SALES/Payment Methods/MiMO. From here you need to configure MiMo Payment method related changes
 
--- Enabled : Select yes 
--- Payment Action : Authorize and Capture
--- Payment Method Name : Place the name which you want to display in Checkout Process
--- New Order Status : Select the Order status which are done using MiMo
--- API Key : Provide API key given by MiMo payment getway
--- API Secret : Provide API Secret given by MiMo
--- MiMo Payment Platform : Select Mode in which you want to Run MiMo Payment Gateway
+<ol>
+<li>Go to system/Configuration/Advance/advance/Disable Modules Output/Mimo_MimoPaymentModule. Enable this module if it is not already enabled.</li>
+<li>Go to system/Configuration/Sales/checkout/checkout options/Enable Onepage Checkout. Select No from dropdown. So simply you just need to disable one page checkout.</li>
+<li>Go to system/Configuration/SALES/Payment Methods/MiMO. From here you need to configure MiMo Payment method related changes
+<ul>
+<li>Enabled : Select yes</li>
+<li>Payment Action : Authorize and Capture</li>
+<li>Payment Method Name : Place the name which you want to display in Checkout Process/li>
+<li>New Order Status : Select the Order status which are done using MiMo</li>
+<li>API Key : Provide API key given by MiMo payment getway</li>
+<li>API Secret : Provide API Secret given by MiMo</li>
+<li>MiMo Payment Platform : Select Mode in which you want to Run MiMo Payment Gateway</li>
+</ul>
 
-Note: If you are not getting above module configuration, then make sure you have cleared you magento cache.
+
+</li>
+</ol>
+
+<strong>Note:</strong> If you are not getting above module configuration, then make sure you have cleared you magento cache.
