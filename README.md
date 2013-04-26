@@ -15,16 +15,17 @@ Place app/etc/modules/Mimo_MimoPaymentModule.xml file and place into your magent
 
 Open app/etc/local.xml file and copy and paste below content in your magento_directory/app/etc/local.xml file before ending of </config> tag.
 
-<stores>
-	<admin>
-		<design>
-		<theme>
-			<default>mimo</default>
-		</theme>
-		</design>
-	</admin>
-</stores>
-
+<pre>
+&lt;stores&gt;
+	&lt;admin&gt;
+		&lt;design&gt;
+		&lt;theme&gt;
+			&lt;default&gt;mimo&lt;/default&gt;
+		&lt;/theme&gt;
+		&lt;/design&gt;
+	&lt;/admin&gt;
+&lt;/stores&gt;
+</pre>
 Important: 
 Don't replace whole local.xml file.
 Copy and paste only above content only.
