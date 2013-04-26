@@ -45,7 +45,7 @@ Now you can set up your MiMo module. Login with your magento admin panel and go 
 <li>Payment Action : Authorize and Capture</li>
 <li>Payment Method Name : Place the name which you want to display in Checkout Process</li>
 <li>New Order Status : Select the Order status which are done using MiMo</li>
-<li>API Key : Provide API key given by MiMo payment getway</li>
+<li>API Key : Provide API key given by MiMo payment gateway</li>
 <li>API Secret : Provide API Secret given by MiMo</li>
 <li>MiMo Payment Platform : Select Mode in which you want to Run MiMo Payment Gateway</li>
 </ul>
