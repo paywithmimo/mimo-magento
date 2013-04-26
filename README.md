@@ -41,7 +41,7 @@ Now you can set up your MiMo module. Login with your magento admin panel and go 
 <li>Go to System --> Configuration --> Sales --> checkout --> checkout options --> Enable Onepage Checkout. Select No from dropdown. So simply you just need to disable one page checkout.</li>
 <li>Go to System --> Configuration --> Sales  --> Payment Methods --> MiMo. From here you need to configure MiMo Payment method related changes
 <ul>
-<li>Enabled : Select yes</li>
+<li>Enabled : Select Yes</li>
 <li>Payment Action : Authorize and Capture</li>
 <li>Payment Method Name : Place the name which you want to display in Checkout Process</li>
 <li>New Order Status : Select the Order status which are done using MiMo</li>
