@@ -3,7 +3,9 @@
 - [CURL PHP](http://php.net/manual/en/book.curl.php)
 - [JSON PHP](http://php.net/manual/en/book.json.php)
 
-## Installation Guide:
+# Installation Guide:
+
+## MiMo Payment Module
 
 Place <strong>app/code/local/Mimo</strong> directory into your <strong>magento_directory/app/code/local</strong> directory. If you do not have local directory under /app/code/ then you can create new.
 
@@ -31,15 +33,22 @@ Open <strong>app/etc/local.xml</strong> file and copy and paste below content in
 Don't replace whole local.xml file.
 Copy and paste only above content only.
 
+## MiMo Order Module
 
-## Configuration Guide:
+Place <strong>app/etc/modules/Mimo_Mimoorders.xml</strong> file into your <strong>magento_directory/app/etc/modules</strong> directory
+
+Place <strong>app/design/adminhtml/default/default/lauout/mimo</strong> directory into your <strong>magento_directory/app/design/adminhtml/default/default/lauout/</strong> directory
+
+# Configuration Guide:
+
+## MiMo Payment Module
 
 Now you can set up your MiMo module. Login with your magento admin panel and go through below step for configure MiMo Module. 
 
 <ol>
-<li>Go to System --> Configuration --> Advance --> advance/Disable Modules Output/Mimo_MimoPaymentModule. Enable this module if it is not already enabled.</li>
-<li>Go to System --> Configuration --> Sales --> checkout --> checkout options --> Enable Onepage Checkout. Select No from dropdown. So simply you just need to disable one page checkout.</li>
-<li>Go to System --> Configuration --> Sales  --> Payment Methods --> MiMo. From here you need to configure MiMo Payment method related changes
+<li>Go to System &gt;&gt; Configuration &gt;&gt; Advance &gt;&gt; advance/Disable Modules Output/Mimo_MimoPaymentModule. Enable this module if it is not already enabled.</li>
+<li>Go to System &gt;&gt; Configuration &gt;&gt; Sales &gt;&gt; checkout &gt;&gt; checkout options &gt;&gt; Enable Onepage Checkout. Select No from dropdown. So simply you just need to disable one page checkout.</li>
+<li>Go to System &gt;&gt; Configuration &gt;&gt; Sales  &gt;&gt; Payment Methods &gt;&gt; MiMo. From here you need to configure MiMo Payment method related changes
 <ul>
 <li>Enabled : Select Yes</li>
 <li>Payment Action : Authorize and Capture</li>
@@ -53,3 +62,11 @@ Now you can set up your MiMo module. Login with your magento admin panel and go 
 </ol>
 
 <strong>Note:</strong> If you are not getting above module configuration, then make sure you have cleared you magento cache.
+
+## MiMo Order Module
+
+<ol>
+<li>Go to System &gt;&gt; Configuration &gt;&gt; Advance &gt;&gt; advance/Disable Modules Output/Mimo_Mimoorders. Enable this module if it is not already enabled.</li>
+</ol>
+
+<strong>Note:</strong> Once done try clearing Magento cache and you will find filtering option for Payment method in order listing page.
