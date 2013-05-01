@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+/**
+* MiMo
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+*
+* @category    Mimo
+* @package     Mimo_Mimoorders
+* @author      MiMo Core Team
+* @copyright   Copyright (c) 2012 MiMo 
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Mimo_Mimoorders>
+            <version>1.0.0</version>
+        </Mimo_Mimoorders>
+    </modules>
+    <global>
+        <blocks>
+            <mimo_mimoorders>
+                <class>Mimo_Mimoorders_Block</class>
+            </mimo_mimoorders>
+        </blocks>
+        <helpers>
+            <mimo_mimoorders>
+                <class>Mimo_Mimoorders_Helper</class>
+            </mimo_mimoorders>
+        </helpers>
+        <models>
+            <mimo_mimoorders>
+                <class>Mimo_Mimoorders_Model</class>
+            </mimo_mimoorders>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <sales_order_grid_collection_load_before>
+                <observers>
+                    <mimo_mimoordeers>
+                        <model>mimo_mimoorders/observer</model>
+                        <method>salesOrderGridCollectionLoadBefore</method>
+                    </mimo_mimoordeers>
+                </observers>
+            </sales_order_grid_collection_load_before>
+        </events>
+        <layout>
+            <updates>
+                <mimo_mimoorders>
+                    <file>mimo/mimoorders.xml</file>
+                </mimo_mimoorders>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

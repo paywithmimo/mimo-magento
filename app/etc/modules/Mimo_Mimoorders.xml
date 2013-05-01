@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mimo_Mimoorders>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mimo_Mimoorders>
+    </modules>
+</config>
